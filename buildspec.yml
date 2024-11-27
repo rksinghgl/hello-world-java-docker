@@ -28,6 +28,5 @@ phases:
       - printf '[{"name":"%s","imageUri":"%s"}]' $DOCKER_CONTAINER_NAME $REPOSITORY_URI:$IMAGE_TAG > imagedefinitions.json
       - cat imagedefinitions.json 
 artifacts:
-    files: 
-     - imagedefinitions.json
-     - target/DockerDemo.jar
+  files:
+    - '**/*'
