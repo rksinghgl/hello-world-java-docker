@@ -24,6 +24,7 @@ phases:
       - docker push $REPOSITORY_URI:$BUILD_TAG
       - docker push $REPOSITORY_URI:$IMAGE_TAG
       - echo Writing image definitions file...
+      - DOCKER_CONTAINER_NAME=benevity-java
       - printf '[{"name":"%s","imageUri":"%s"}]' $DOCKER_CONTAINER_NAME $REPOSITORY_URI:$IMAGE_TAG > imagedefinitions.json
       - cat imagedefinitions.json 
 artifacts:
